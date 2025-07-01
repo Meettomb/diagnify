@@ -16,7 +16,7 @@ function HomePage() {
       </section>
 
       <section className="home_section_2">
-        <h1>Hellooooooo</h1>
+        <h1>Hello im Meet Patel</h1>
         <h1>Hello</h1>
         <h1>Hello</h1>
         <h1>Hello</h1>
