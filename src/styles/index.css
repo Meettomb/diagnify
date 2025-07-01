@@ -204,6 +204,7 @@ html,
     padding: 8px;
     font-size: 14PX;
     text-transform: capitalize;
+    width: 90%;
 }
 .header .header_main .header_nav .header_nav_p .headre_drop_down ul a{
     text-decoration: none;
