@@ -1,5 +1,4 @@
 import React from "react";
-
 function HomePage() {
   return (
     <div>
@@ -11,7 +10,9 @@ function HomePage() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <img src="/images/home_section_1_image.jpg" alt="home" />
+        
+        <img src={`${import.meta.env.BASE_URL}/images/home_section_1_image.jpg`} alt="home" />
+
       </section>
 
       <section className="home_section_2">
@@ -21,7 +22,7 @@ function HomePage() {
         <h1>Hello</h1>
         <h1>Hello</h1>
       </section>
-      
+
       </main>
     </div>
   );
