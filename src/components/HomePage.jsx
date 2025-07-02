@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+
 function HomePage() {
   const aboutImage = useRef();
   const lil1 = useRef();
@@ -71,7 +72,7 @@ function HomePage() {
                   className="aboutImage"
                   src={`${
                     import.meta.env.BASE_URL
-                  }/public/images/human_ai_collab.jpg`}
+                  }/images/human_ai_collab.jpg`}
                   alt=""
                 />
               </div>
@@ -82,7 +83,7 @@ function HomePage() {
                   without needing a specialist on call.
                 </p>
                 <p>
-                  We’re a team of engineers, medical advisors, and AI experts
+                  We're a team of engineers, medical advisors, and AI experts
                   working together to make healthcare more accessible. Our
                   platform uses state-of-the-art artificial intelligence to
                   analyze X-rays, CT scans, MRIs, ultrasounds, and more—giving
@@ -91,7 +92,7 @@ function HomePage() {
                 <p>
                   Whether you're a patient looking for peace of mind, a
                   caregiver wanting a second opinion, or a professional needing
-                  quick insights—we’re here to support you.
+                  quick insights—we're here to support you.
                 </p>
               </div>
             </div>
@@ -127,6 +128,13 @@ function HomePage() {
             </div>
           </div>
         </section>
+
+        <section className="home_section_3">
+          <div className="how_work_container">
+                  
+          </div>
+        </section>
+
       </main>
     </div>
   );
