@@ -7,28 +7,10 @@ import HomePage from "./components/HomePage.jsx";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const handleLoad = () => setLoading(false);
-    window.addEventListener("load", handleLoad);
-
-    return () => window.removeEventListener("load", handleLoad);
-  }, []);
+  
 
   return (
-    <div>
-      {loading && (
-        <div className="loder">
-          <img
-            src={`${import.meta.env.BASE_URL}/images/loder.gif`}
-            alt="loder"
-          />
-        </div>
-      )}
-      
-
-      {!loading && (
+    <div>      
         <Router basename="/diagnify">
           <Header />
           <Routes>
@@ -36,7 +18,6 @@ function App() {
             <Route path="/Blog" element={<Blog />}></Route>
           </Routes>
         </Router>
-      )}
     </div>
   );
 }
