@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const aboutImage = useRef();
+  const aboutImage2 = useRef();
   const lil1 = useRef();
   const lil2 = useRef();
   const lil3 = useRef();
@@ -28,6 +30,8 @@ function HomePage() {
             target.classList.add("animate_left3");
           } else if (target.classList.contains("aboutImage")) {
             target.classList.add("animate_aboutImage");
+          } else if (target.classList.contains("aboutImage2")) {
+            target.classList.add("animate_aboutImage2");
           }
         }
       },
@@ -36,6 +40,7 @@ function HomePage() {
       }
     );
     if (aboutImage.current) observer.observe(aboutImage.current);
+    if (aboutImage2.current) observer.observe(aboutImage2.current);
     if (lil1.current) observer.observe(lil1.current);
     if (lil2.current) observer.observe(lil2.current);
     if (lil3.current) observer.observe(lil3.current);
@@ -50,14 +55,12 @@ function HomePage() {
         <section className="home_section_1">
           <div className="text_div">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Understand Your Medical Images in Seconds — Powered by AI, Designed for You.
             </p>
           </div>
 
           <img
             src={`${import.meta.env.BASE_URL}/images/home_section_1_image.jpg`}
-            alt="home"
             loading="lazy"
           />
         </section>
@@ -70,9 +73,7 @@ function HomePage() {
                 <img
                   ref={aboutImage}
                   className="aboutImage"
-                  src={`${
-                    import.meta.env.BASE_URL
-                  }/images/human_ai_collab.jpg`}
+                  src={`${import.meta.env.BASE_URL}/images/human_ai_collab.jpg`}
                   alt=""
                 />
               </div>
@@ -96,6 +97,7 @@ function HomePage() {
                 </p>
               </div>
             </div>
+
             <div className="home_about_div2">
               <div className="home_about_whay">
                 <p>Why We Exist</p>
@@ -110,8 +112,7 @@ function HomePage() {
                     To empower people to take control of their health decisions
                   </li>
                 </ul>
-              </div>
-              <div className="home_about_promise">
+
                 <p>Our Promise</p>
                 <ul>
                   <li ref={lir1} className="lir1">
@@ -125,16 +126,51 @@ function HomePage() {
                   </li>
                 </ul>
               </div>
+
+              <div className="home_about_image2">
+                 <img
+                  ref={aboutImage2}
+                  className="aboutImage2"
+                  src={`${import.meta.env.BASE_URL}/images/body_ai_chackup.jpg`}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </section>
 
         <section className="home_section_3">
           <div className="how_work_container">
-                  
+            <h1>Simple, Swift, and Straightforward</h1>
+            <h3>
+              Get expertly crafted reports with layman-friendly summaries and
+              personalized follow-up explanations.
+            </h3>
+            <div className="staps_container">
+              <div className="steps">
+                <i class="fa-solid fa-upload"></i>
+                <b>Upload Your Image</b>
+                <p>Quickly upload your image through our secure platform.</p>
+              </div>
+              <div className="steps">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <b>Receive Your Report</b>
+                <p>Get a detailed report with easy-to-understand summaries.</p>
+              </div>
+              <div className="steps">
+                <i class="fa-solid fa-message"></i>
+                <b>Ask Follow-Up Questions</b>
+                <p>Easily ask questions for further explanations.</p>
+              </div>
+            </div>
+
+            <div className="uplode_link">
+              <Link to="#">
+                <p>Uplode your image now</p>
+              </Link>
+            </div>
           </div>
         </section>
-
       </main>
     </div>
   );

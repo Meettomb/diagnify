@@ -4,7 +4,6 @@ import Blog from "./components/Blog.jsx";
 import Header from "./components/Header.jsx";
 import HomePage from "./components/HomePage.jsx";
 
-import { useState, useEffect } from "react";
 
 function App() {
   
