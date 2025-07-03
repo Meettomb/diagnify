@@ -40,12 +40,10 @@ function Header() {
     };
   }, []);
 
-  const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
       const header = document.querySelector(".header");
-      setScrollY(currentScroll);
 
       if (currentScroll >= 70) {
         header.classList.add("scrolled");
@@ -53,7 +51,6 @@ function Header() {
         header.classList.remove("scrolled");
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
