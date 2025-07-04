@@ -234,11 +234,7 @@ function HomePage() {
                </div>
              </div>
  
-             <div className="uplode_link">
-               <Link to="#">
-                 <p>Uplode your image now</p>
-               </Link>
-             </div>
+             
            </div>
          </section>
        </main>
