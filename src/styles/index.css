@@ -1426,7 +1426,7 @@ html,
     }
 
     .home_section_2 .home_about_container {
-        margin: 0px 0 50px 0;
+        margin: 50px 0 50px 0;
     }
 
     .home_section_2 .home_about_container .home_about_div1 {
@@ -1590,6 +1590,7 @@ html,
 
     .home_section_5 .contact_us_container .map_div {
         width: 100%;
+        margin-top: 30px;
     }
 
     .home_section_5 .contact_us_container .map_div iframe {
