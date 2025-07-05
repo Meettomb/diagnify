@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Website\\Diagnify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Website\\Diagnify\\src\\components\\SignUp.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\SignUp.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Website\\Diagnify\\src\\components\\HomePage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\HomePage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Website\\Diagnify\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Website\\Diagnify\\src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\styles\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Website\\Diagnify\\src\\components\\Header.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Header.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.jsx",
+              "DocumentMoniker": "D:\\Website\\Diagnify\\src\\App.jsx",
+              "RelativeDocumentMoniker": "src\\App.jsx",
+              "ToolTip": "D:\\Website\\Diagnify\\src\\App.jsx",
+              "RelativeToolTip": "src\\App.jsx",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-07-04T16:49:22.895Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
@@ -39,27 +48,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SignUp.jsx",
-              "DocumentMoniker": "D:\\Website\\Diagnify\\src\\components\\SignUp.jsx",
-              "RelativeDocumentMoniker": "src\\components\\SignUp.jsx",
-              "ToolTip": "D:\\Website\\Diagnify\\src\\components\\SignUp.jsx",
-              "RelativeToolTip": "src\\components\\SignUp.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Title": "HomePage.jsx",
+              "DocumentMoniker": "D:\\Website\\Diagnify\\src\\components\\HomePage.jsx",
+              "RelativeDocumentMoniker": "src\\components\\HomePage.jsx",
+              "ToolTip": "D:\\Website\\Diagnify\\src\\components\\HomePage.jsx",
+              "RelativeToolTip": "src\\components\\HomePage.jsx",
+              "ViewState": "AgIAAAQCAAAAAAAAAAAwwBQCAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-07-04T06:17:12.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.jsx",
-              "DocumentMoniker": "D:\\Website\\Diagnify\\src\\App.jsx",
-              "RelativeDocumentMoniker": "src\\App.jsx",
-              "ToolTip": "D:\\Website\\Diagnify\\src\\App.jsx",
-              "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AgIAABAAAAAAAAAAAAAowCoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-07-04T06:15:12.553Z",
+              "WhenOpened": "2025-07-04T16:44:10.303Z",
               "EditorCaption": ""
             },
             {
@@ -70,22 +66,9 @@
               "RelativeDocumentMoniker": "src\\styles\\index.css",
               "ToolTip": "D:\\Website\\Diagnify\\src\\styles\\index.css",
               "RelativeToolTip": "src\\styles\\index.css",
-              "ViewState": "AgIAAAIFAAAAAAAAAAAYwCkFAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF8GAAAAAAAAAAAkwIAGAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-07-04T06:14:53.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Header.jsx",
-              "DocumentMoniker": "D:\\Website\\Diagnify\\src\\components\\Header.jsx",
-              "RelativeDocumentMoniker": "src\\components\\Header.jsx",
-              "ToolTip": "D:\\Website\\Diagnify\\src\\components\\Header.jsx",
-              "RelativeToolTip": "src\\components\\Header.jsx",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAowIAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-07-04T06:13:02.133Z",
               "EditorCaption": ""
             }
           ]

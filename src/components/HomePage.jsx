@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function HomePage() {
+function HomePage({ onSuccess }) {
+    const [showSuccess, setShowSuccess] = useState(false);
   const blog1 = useRef();
   const blog2 = useRef();
   const blog3 = useRef();
@@ -109,7 +110,69 @@ function HomePage() {
 
   const toggleFAQ = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
-  };
+    };
+
+    const [form, setForm] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+    });
+    const [errors, setErrors] = useState({});
+    const handleChange = (field, value) => {
+        setForm((prev) => ({ ...prev, [field]: value }));
+    };
+    const validate = () => {
+        const newErrors = {};
+
+        const nameRegex = /^[A-Za-z\s]+$/;
+
+        if (!form.firstName.trim()) {
+            newErrors.firstName = "First name is required";
+        } else if (!nameRegex.test(form.firstName)) {
+            newErrors.firstName = "First name can only contain letters";
+        }
+
+        if (!form.lastName.trim()) {
+            newErrors.lastName = "Last name is required";
+        } else if (!nameRegex.test(form.lastName)) {
+            newErrors.lastName = "Last name can only contain letters";
+        }
+
+        if (!form.email.trim()) newErrors.email = "Email is required";
+        if (!form.message.trim()) {
+            newErrors.message = "Message is required";
+        } else {
+            const wordCount = form.message.trim().split(/\s+/).length;
+
+            if (wordCount < 10) {
+                newErrors.message = "Message must be at least 10 words";
+            } else if (wordCount > 500) {
+                newErrors.message = "Message cannot exceed 500 words";
+            }
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validate()) {
+            setShowSuccess(true);
+            setTimeout(() => {
+                setShowSuccess(false);
+            }, 2000);
+
+            setForm({
+                firstName: "",
+                lastName: "",
+                email: "",
+                message: "",
+            });
+            setErrors({});
+        }
+    };
 
   return (
     <div>
@@ -401,68 +464,89 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="home_section_5">
-          <div className="contact_us_container">
-            <h1>Contact Us</h1>
-            <div className="conact_div">
-              <div className="contact_form">
-                <form>
-                  <div className="user_wrap">
-                    <label>First Name</label>
-                    <input
-                      type="text"
-                      name="first_name"
-                      placeholder="First Name"
-                      autoComplete="off"
-                    />
-                  </div>
+              <section className="home_section_5">
+                  <div className="contact_us_container">
+                      <h1>Contact Us</h1>
 
-                  <div className="user_wrap">
-                    <label>Last Name</label>
-                    <input
-                      type="text"
-                      name="last_name"
-                      placeholder="Last Name"
-                      autoComplete="off"
-                    />
-                  </div>
+                      {showSuccess && (
+                          <p className="success_message">
+                              <i className="fa-regular fa-circle-check"></i> Feedback saved
+                              Successful
+                          </p>
+                      )}
 
-                  <div className="user_wrap">
-                    <label>Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      autoComplete="off"
-                    />
-                  </div>
+                      <div className="conact_div">
+                          <div className="contact_form">
+                              <form onSubmit={handleSubmit}>
+                                  <div className="user_wrap">
+                                      <label>First Name</label>
+                                      <input
+                                          type="text"
+                                          name="first_name"
+                                          placeholder="First Name"
+                                          autoComplete="off"
+                                          value={form.firstName}
+                                          onChange={(e) =>
+                                              handleChange("firstName", e.target.value)
+                                          }
+                                      />
+                                      <p style={{ color: "red" }}>{errors.firstName}</p>
+                                  </div>
 
-                  <div className="user_wrap">
-                    <label>Message</label>
-                    <textarea
-                      placeholder="Type your quary"
-                      autoComplete="off"
-                    ></textarea>
-                  </div>
+                                  <div className="user_wrap">
+                                      <label>Last Name</label>
+                                      <input
+                                          type="text"
+                                          name="last_name"
+                                          placeholder="Last Name"
+                                          autoComplete="off"
+                                          value={form.lastName}
+                                          onChange={(e) => handleChange("lastName", e.target.value)}
+                                      />
+                                      <p style={{ color: "red" }}>{errors.lastName}</p>
+                                  </div>
 
-                  <button>
-                    Send <i className="fa-solid fa-paper-plane"></i>
-                  </button>
-                </form>
-              </div>
-              <div className="map_div">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.748297170293!2d72.49964718939324!3d22.996281466184115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b2a41bde76d%3A0xdf3dc198626a6d56!2sTitanium%20Business%20Park!5e0!3m2!1sen!2sin!4v1751655143545!5m2!1sen!2sin"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Map"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </section>
+                                  <div className="user_wrap">
+                                      <label>Email</label>
+                                      <input
+                                          type="email"
+                                          name="email"
+                                          placeholder="Email"
+                                          autoComplete="off"
+                                          value={form.email}
+                                          onChange={(e) => handleChange("email", e.target.value)}
+                                      />
+                                      <p style={{ color: "red" }}>{errors.email}</p>
+                                  </div>
+
+                                  <div className="user_wrap">
+                                      <label>Message</label>
+                                      <textarea
+                                          placeholder="Type your quary"
+                                          autoComplete="off"
+                                          value={form.message}
+                                          onChange={(e) => handleChange("message", e.target.value)}
+                                      ></textarea>
+                                      <p style={{ color: "red" }}>{errors.message}</p>
+                                  </div>
+
+                                  <button type="submit">
+                                      Send <i className="fa-solid fa-paper-plane"></i>
+                                  </button>
+                              </form>
+                          </div>
+                          <div className="map_div">
+                              <iframe
+                                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.748297170293!2d72.49964718939324!3d22.996281466184115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b2a41bde76d%3A0xdf3dc198626a6d56!2sTitanium%20Business%20Park!5e0!3m2!1sen!2sin!4v1751655143545!5m2!1sen!2sin"
+                                  style={{ border: 0 }}
+                                  allowFullScreen=""
+                                  referrerPolicy="no-referrer-when-downgrade"
+                                  title="Map"
+                              ></iframe>
+                          </div>
+                      </div>
+                  </div>
+              </section>
       </main>
     </div>
   );
