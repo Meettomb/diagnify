@@ -38,13 +38,13 @@ function Footer() {
 
                         <ul>
                             <li>
-                                <Link to="/">BIO Metrics</Link>
+                                <Link to="/uplode">BIO Metrics</Link>
                             </li>
                             <li>
-                                <Link to="/">Lung</Link>
+                                <Link to="/uplode">Lung</Link>
                             </li>
                             <li>
-                                <Link to="/">Brain</Link>
+                                <Link to="/uplode">Brain</Link>
                             </li>
                         </ul>
                     </div>

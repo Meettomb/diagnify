@@ -102,13 +102,13 @@ function Header({ onLoginClick, onSignUpClick }) {
                                         {showDropdown && (
                                             <div className="headre_drop_down" id="headre_drop_down">
                                                 <ul>
-                                                    <Link to="/Blog" onClick={handleNavLinkClick}>
+                                                    <Link to="/uplode" onClick={handleNavLinkClick}>
                                                         <li>BIO Metrics</li>
                                                     </Link>
-                                                    <Link to="">
+                                                    <Link to="/uplode">
                                                         <li>Lung</li>
                                                     </Link>
-                                                    <Link to="">
+                                                    <Link to="/uplode">
                                                         <li>Brain</li>
                                                     </Link>
                                                 </ul>
